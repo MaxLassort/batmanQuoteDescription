@@ -10,6 +10,7 @@ import Root from "./routes/root";
 import ErrorPage from "./Pages/error-page"
 import BatmanQuote from "./Pages/batman-random-page"
 import Markdown from "./Pages/markdown-previewer"
+import DrumMachine from "./Pages/drum-machine"
 
 
 
@@ -25,6 +26,9 @@ const router = createBrowserRouter([
             }, {
                 path: "/markdown",
                 element:<Markdown />,
+            },{
+                path: "/drumMachine",
+                element:<DrumMachine />,
             },
         ]
     },

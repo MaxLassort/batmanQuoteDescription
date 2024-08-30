@@ -8,8 +8,9 @@ export default function Root() {
         <>
             <Navbar expand="lg" className="bg-body-tertiary">
                 <Container className="d-flex justify-content-end">
-                    <Navbar.Brand href="/batman">BatmanRandomQuote</Navbar.Brand>
+                    <Navbar.Brand href="/batman">Batman Random Quote</Navbar.Brand>
                     <Navbar.Brand href="/markdown">Markdown</Navbar.Brand>
+                    <Navbar.Brand href="/drumMachine">Drum Machine</Navbar.Brand>
                 </Container>
             </Navbar>
             <Outlet />
