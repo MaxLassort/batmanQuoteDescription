@@ -3,21 +3,11 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import './App.css';
 import Button from 'react-bootstrap/Button';
 import {useState} from 'react';
+import Character from '../models/Character'
 
-
-export class Character {
-    constructor(data) {
-        this.id = data.id;
-        this.name = data.attributes.alias;
-        this.description = data.attributes.description
-    }
-
-}
-
-function App() {
+function BatmanQuote() {
 
     const [index, setIndex] = useState(1);
     const [charact, setCharact] = useState(new Character(
@@ -44,8 +34,9 @@ function App() {
 
     }
 
-    return (
 
+
+    return (
         <Container fluid className="bg-light d-flex align-items-center justify-content-center"
                    style={{height: '100vh'}}>
             <Row>
@@ -68,4 +59,4 @@ function App() {
     );
 }
 
-export default App;
+export default BatmanQuote;

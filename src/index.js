@@ -1,13 +1,38 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {
+    createBrowserRouter,
+    RouterProvider,
+} from "react-router-dom";
+import Root from "./routes/root";
+import ErrorPage from "./Pages/error-page"
+import BatmanQuote from "./Pages/batman-random-page"
+import Markdown from "./Pages/markdown-previewer"
 
+
+
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element:<Root />,
+        errorElement: <ErrorPage />,
+        children: [
+            {
+                path: "/batman",
+                element:<BatmanQuote />,
+            }, {
+                path: "/markdown",
+                element:<Markdown />,
+            },
+        ]
+    },
+]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+      <RouterProvider router={router} />
   </React.StrictMode>
 );
 
