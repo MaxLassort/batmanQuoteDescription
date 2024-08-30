@@ -1,9 +1,8 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import {useState,useRef } from 'react';
+import {useState } from 'react';
 import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
 export function Markdown(){
     const markdown = `# Welcome to my React Markdown Previewer!
 
