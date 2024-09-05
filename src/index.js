@@ -12,7 +12,7 @@ import BatmanQuote from "./Pages/batman-random-page"
 import Markdown from "./Pages/markdown-previewer"
 import DrumMachine from "./Pages/drum-machine"
 import Calculator from "./Pages/calculator"
-
+import Clock from "./Pages/clock"
 
 
 const router = createBrowserRouter([
@@ -33,7 +33,10 @@ const router = createBrowserRouter([
             },{
                 path: "/calculator",
                 element:<Calculator />,
-            },
+            },{
+                path: "/clock",
+                element:<Clock />,
+            }
         ]
     },
 ]);

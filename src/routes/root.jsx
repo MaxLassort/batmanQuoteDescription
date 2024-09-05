@@ -12,6 +12,7 @@ export default function Root() {
                     <Navbar.Brand href="/markdown">Markdown</Navbar.Brand>
                     <Navbar.Brand href="/drumMachine">Drum Machine</Navbar.Brand>
                     <Navbar.Brand href="/calculator">Calculator</Navbar.Brand>
+                    <Navbar.Brand href="/clock">Clock</Navbar.Brand>
                 </Container>
             </Navbar>
             <Outlet />
