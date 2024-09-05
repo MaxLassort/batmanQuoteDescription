@@ -1,3 +1,4 @@
+/* eslint no-eval: 0 */
 import Container from 'react-bootstrap/Container';
 import {useState} from 'react';
 
@@ -59,15 +60,7 @@ export function Calculator() {
     }
 
     const calculate = ()=> {
-          try {
-            // Remplacement de 'x' par '*' pour la multiplication
-            let expression = result.replace(/x/g, "*");
-
-            // Utilisation de Function pour évaluer l'expression
-            setResult(Function(`"use strict"; return (${expression})`)().toString());
-        } catch (error) {
-            setResult("Error");
-        }
+        setResult(eval(result))
     }
 
 
