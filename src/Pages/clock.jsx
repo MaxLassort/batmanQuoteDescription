@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 const audio = document.getElementById("beep");
 
 class Clock extends React.Component {
