@@ -7,7 +7,6 @@ export function DrumMachine() {
 
     useEffect(() => {
         document.addEventListener('keypress', handleKeyPress);
-
         return () => {
             document.removeEventListener('keypress', handleKeyPress);
         };

@@ -11,6 +11,7 @@ import ErrorPage from "./Pages/error-page"
 import BatmanQuote from "./Pages/batman-random-page"
 import Markdown from "./Pages/markdown-previewer"
 import DrumMachine from "./Pages/drum-machine"
+import Calculator from "./Pages/calculator"
 
 
 
@@ -29,6 +30,9 @@ const router = createBrowserRouter([
             },{
                 path: "/drumMachine",
                 element:<DrumMachine />,
+            },,{
+                path: "/calculator",
+                element:<Calculator />,
             },
         ]
     },
