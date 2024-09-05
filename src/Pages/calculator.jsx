@@ -60,7 +60,9 @@ export function Calculator() {
     }
 
     const calculate = ()=> {
+        // /* eslint-disable no-eval */
         setResult(eval(result))
+        // /* eslint-enable no-eval */
     }
 
 
