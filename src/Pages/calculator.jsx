@@ -20,7 +20,6 @@ export function Calculator() {
                         return prevValue + event.target.value
                     } else {
                         return prevValue;
-
                     }
                 }
                 if(prevValue.slice(-1) === '.' && event.target.value === '.'){
@@ -60,9 +59,15 @@ export function Calculator() {
     }
 
     const calculate = ()=> {
-        // /* eslint-disable no-eval */
-        setResult(eval(result))
-        // /* eslint-enable no-eval */
+          try {
+            // Remplacement de 'x' par '*' pour la multiplication
+            let expression = result.replace(/x/g, "*");
+
+            // Utilisation de Function pour évaluer l'expression
+            setResult(Function(`"use strict"; return (${expression})`)().toString());
+        } catch (error) {
+            setResult("Error");
+        }
     }
 
 
